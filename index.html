@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Business Idea App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Smart Business Idea App</h1>
+      <p>Frontend can run on GitHub Pages and connect to your backend API URL.</p>
+      <span id="mode-pill" class="pill">Mode: checking...</span>
+    </header>
+
+    <section class="card">
+      <h2>Backend Connection</h2>
+      <label>Backend API Base URL
+        <input id="api-base" type="url" placeholder="https://your-backend.onrender.com" />
+      </label>
+    </section>
+
+    <form id="idea-form" class="card">
+      <h2>Generate Ideas</h2>
+      <label>Budget (₹)<input id="budget" type="number" min="1000" required value="50000" /></label>
+      <label>Location<input id="location" type="text" required value="Pune" /></label>
+      <label>Business Type<input id="type" type="text" required value="food" /></label>
+      <label>Ideas Count<input id="count" type="number" min="1" max="20" value="5" /></label>
+      <button type="submit">Generate Smart Ideas</button>
+    </form>
+
+    <section class="card">
+      <h2>Idea Results</h2>
+      <div id="ideas" class="ideas-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Launch Plan</h2>
+      <button id="generate-plan" type="button">Create Plan For Top Idea</button>
+      <pre id="plan">Generate ideas first, then create a plan.</pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
